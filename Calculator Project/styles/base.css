@@ -31,14 +31,10 @@ html {
     position: relative;
 }
 
-.app.sidebar-open {
-    max-width: 700px;
-    grid-template-columns: 60% 40%;
-}
-
 /* left Part Style */
 
 .calculator {
+    position: relative;
     display: grid;
     grid-template-rows: auto auto auto 1fr;
     font-size: larger;
@@ -48,6 +44,11 @@ html {
 .calculator__header {
     display: flex;
     flex-direction: column;
+    gap: 10px;
+}
+
+.heading__wrapper h1 {
+    font-size: 28px;
 }
 
 .calculator__display {
@@ -106,6 +107,10 @@ html {
     column-gap: 5px;
 }
 
+.calculator__keypad.sidebar-open {
+    display: none;
+}
+
 .calculator__keypad button {
     min-height: 40px;
     font-weight: var(--font-bold);
@@ -120,7 +125,7 @@ html {
     align-items: center;
 }
 .more__logo,
-.more__mogo__btn {
+.more__logo__btn {
     height: 30px;
     width: 30px;
     border: none;
@@ -187,11 +192,14 @@ html {
 }
 
 .calculator-sidebar.active {
-    padding: 5px;
+    padding: 10px;
     display: flex;
     gap: 20px;
     flex-direction: column;
     transform: translateX(0);
+    position: absolute;
+    top: 35%;
+    left: 1%;
 }
 
 .sidebar__content {

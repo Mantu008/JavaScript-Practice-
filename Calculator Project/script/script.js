@@ -1,8 +1,8 @@
-const toggleBtn = document.querySelector(".more__mogo__btn");
+const toggleBtn = document.querySelector(".more__logo__btn");
 const sidebar = document.querySelector(".calculator-sidebar");
-const app = document.querySelector(".app");
+const calculator__keypad = document.querySelector(".calculator__keypad");
 
 toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("active"); // show/hide sidebar
-    app.classList.toggle("sidebar-open"); // adjust layout
+    calculator__keypad.classList.toggle("sidebar-open"); // adjust layout
 });
