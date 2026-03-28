@@ -16,9 +16,11 @@ html {
 }
 
 .app {
-    height: 100%;
     width: 100%;
     max-width: 400px;
+    min-width: 350px;
+    min-height: 650px;
+    height: auto;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 100%;
@@ -38,7 +40,7 @@ html {
 
 .calculator {
     display: grid;
-    grid-template-rows: 25% auto auto 1fr;
+    grid-template-rows: auto auto auto 1fr;
     font-size: larger;
     background: var(--bg-calculator);
 }
@@ -50,7 +52,7 @@ html {
 
 .calculator__display {
     width: 100%;
-    height: 70%;
+    height: 100%;
     font-size: var(--display-text-size);
     color: var(--text-inverse);
     padding: 10px;
@@ -85,7 +87,7 @@ html {
     cursor: pointer;
     border-radius: var(--btn-radius);
     color: var(--text-inverse);
-    size: var(--btn-siz);
+    size: var(--btn-size);
     transition: 0.2s ease;
 }
 
@@ -105,6 +107,7 @@ html {
 }
 
 .calculator__keypad button {
+    min-height: 40px;
     font-weight: var(--font-bold);
 }
 
@@ -150,6 +153,8 @@ html {
 }
 
 .dropdown__options {
+    min-width: 100px;
+    z-index: 5;
     display: none;
     position: absolute;
     top: 100%;
