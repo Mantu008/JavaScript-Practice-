@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    .app {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 320px) {
+    .app {
+        min-width: 310px;
+    }
+}
